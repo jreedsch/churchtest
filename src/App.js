@@ -4,7 +4,6 @@ import MovieList from './movieList';
 import MovieDetail from './movieDetail';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-
 function App() {
   return (
 

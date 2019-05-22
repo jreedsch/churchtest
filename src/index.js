@@ -11,7 +11,6 @@ import rootReducer from './reducers';
 import { createStore, applyMiddleware } from 'redux';
 
 import App from './App';
-import * as serviceWorker from './serviceWorker';
 
 const rootElement = document.getElementById('root');
 const store = createStore(

@@ -7,7 +7,6 @@ import { GET_MOVIE_LIST,
 const INITIAL_STATE = { };
 
 export default (state = INITIAL_STATE, action) => {
-
     switch (action.type) {
 
       case GET_MOVIE_LIST:
@@ -26,8 +25,9 @@ export default (state = INITIAL_STATE, action) => {
 
 // take the original data and only keep the columns that we want
 function reformatList(listData) {
-
   let rowData = [];
+
+  // new movie row object
   var Movie = function(title, popularity, vote_average, vote_count, id) {
     this.detail = <Link to={{ pathname: "/detail", search: "?id="+id}} className="badge badge-primary">{id}</Link>
     this.title = title;
@@ -36,6 +36,7 @@ function reformatList(listData) {
     this.vote_count = vote_count;
   }
 
+  // move data from API call to output array
   listData.forEach(function(listItem){
     let movie = new Movie(listItem.title, listItem.popularity, listItem.vote_average, listItem.vote_count, listItem.id );
     rowData.push(movie);

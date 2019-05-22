@@ -11,7 +11,6 @@ class MovieDetail extends Component {
   }
 
   render() {
-
     if (this.props.details) {
       const imageURI = "https://image.tmdb.org/t/p/w500/"+this.props.details.poster_path;
 
